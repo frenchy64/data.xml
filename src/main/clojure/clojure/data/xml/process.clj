@@ -1,4 +1,6 @@
 (ns clojure.data.xml.process
+  {:lang :core.typed
+   :core.typed {:features #{:runtime-infer}}}
   (:require [clojure.data.xml.event :refer [element-nss] :as evt]
             [clojure.data.xml.name :as name :refer [gen-prefix *gen-prefix-counter* qname-uri]]
             [clojure.data.xml.node :refer [element] :as node]

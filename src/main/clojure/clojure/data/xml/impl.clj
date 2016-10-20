@@ -8,7 +8,10 @@
 
 (ns clojure.data.xml.impl
   "Shared private code for data.xml namespaces"
-  {:author "Herwig Hochleitner"})
+  {:author "Herwig Hochleitner"
+      :lang :core.typed
+      :core.typed {:features #{:runtime-infer}}}
+  )
 
 (defn- var-form? [form]
   (and (seq? form) (= 'var (first form))))
