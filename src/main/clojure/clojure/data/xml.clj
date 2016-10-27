@@ -31,6 +31,7 @@
      [write-document string-writer]])
    
    [clojure.core.typed :as t]
+   [clojure.spec :as s]
    [clojure.data.xml.tree :refer
     [event-tree flatten-elements]]))
 

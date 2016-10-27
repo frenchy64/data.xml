@@ -5,6 +5,8 @@
             [clojure.data.xml.name :as name :refer [gen-prefix *gen-prefix-counter* qname-uri]]
             [clojure.data.xml.node :refer [element] :as node]
             [clojure.data.xml.tree :refer [flatten-elements] :as tree]
+            [clojure.core.typed :as t]
+            [clojure.spec :as s]
             [clojure.string :as str]))
 
 (defn- reduce-tree

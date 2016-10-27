@@ -11,6 +11,8 @@
   {:author "Herwig Hochleitner"
       :lang :core.typed
       :core.typed {:features #{:runtime-infer}}}
+  (:require [clojure.core.typed :as t]
+            [clojure.spec :as s])
   )
 
 (defn- var-form? [form]

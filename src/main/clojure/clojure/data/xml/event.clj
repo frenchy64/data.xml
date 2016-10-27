@@ -14,6 +14,8 @@
             [clojure.data.xml.name :refer [merge-nss separate-xmlns]]
             [clojure.data.xml.node :refer [element* cdata xml-comment]]
             [clojure.data.xml.impl :refer [extend-protocol-fns]])
+  (:require [clojure.core.typed :as t]
+            [clojure.spec :as s])
   (:import (clojure.data.xml.node Element CData Comment)))
 
 (definline element-nss* [element]
