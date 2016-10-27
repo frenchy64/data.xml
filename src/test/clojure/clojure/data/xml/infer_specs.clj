@@ -1,5 +1,5 @@
-(ns clojure.data.xml.infer-types
+(ns clojure.data.xml.infer-specs
   (:require [clojure.data.xml.infer-xml
              :as i]))
 
-(i/infer :type)
+(i/infer :spec)
