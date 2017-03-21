@@ -23,6 +23,21 @@
     clojure.data.xml.event
     ])
 
+(def tests 
+  '[clojure.data.xml.test-entities
+    clojure.data.xml.test-sexp
+    clojure.data.xml.test-emit
+    clojure.data.xml.test-process
+    clojure.data.xml.test-names
+    clojure.data.xml.test-pprint
+    clojure.data.xml.test-seq-tree
+    clojure.data.xml.test-parse
+    ])
+
+(defn exercise-tests []
+  (apply require tests)
+  (apply run-tests tests))
+
 (defn infer [spec-or-type]
   (binding [*infer-fn* (case spec-or-type
                          :type t/runtime-infer
@@ -31,18 +46,6 @@
     ;; don't compile
     (delete-anns infer-files)
 
-    (def tests 
-      '[clojure.data.xml.test-entities
-        clojure.data.xml.test-sexp
-        clojure.data.xml.test-emit
-        clojure.data.xml.test-process
-        clojure.data.xml.test-names
-        clojure.data.xml.test-pprint
-        clojure.data.xml.test-seq-tree
-        clojure.data.xml.test-parse
-        ])
-
-    (apply require tests)
-    (apply run-tests tests)
+    (exercise-tests)
 
     (infer-anns infer-files)))
