@@ -5,6 +5,7 @@
   :injections [(require 'clojure.core.typed)
                (clojure.core.typed/install
                  #{:load})]
+  :monkeypatch-clojure-test false
   :repl-options {:timeout 3000000}
-  :dependencies [[org.clojure/clojure "1.9.0-alpha13"]
-                 [org.clojure/core.typed "0.3.29-SNAPSHOT"]])
+  :dependencies [[org.clojure/clojure "1.9.0-alpha15"]
+                 [org.clojure/core.typed "0.3.33-SNAPSHOT"]])
